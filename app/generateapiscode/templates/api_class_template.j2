@@ -1,0 +1,19 @@
+from apis.eshop.apis.{{ first_part }}_api import {{ class_name }}
+from core.base.base_api import BaseApi
+from core.fixture import ReadConfig
+
+
+class {{ api_class_name }}(BaseApi):
+    conf_host = ReadConfig().get("test", "host")
+    {% for api in apis %}
+    def {{ api.method_name }}(self, params):
+        """{{ api.title }}"""
+        http_data = {
+            "api_path": {{ class_name }}.{{ api.constant_name }}.path,
+            "method": {{ class_name }}.{{ api.constant_name }}.method,
+            "params": params,
+            "host": self.conf_host,
+        }
+        response = self.send_http(http_data)
+        return response
+    {% endfor %}

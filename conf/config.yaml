@@ -1,0 +1,21 @@
+current_env: test
+
+test:
+  host: https://httpbin.org
+  account:
+    user: test_user
+    pwd: '123456'
+  login:
+    web_token: your_token_here
+
+staging:
+  host: https://stagingapi.example.com
+  account:
+    user: staging_user
+    pwd: '123456'
+
+release:
+  host: https://api.example.com
+  account:
+    user: release_user
+    pwd: '123456'

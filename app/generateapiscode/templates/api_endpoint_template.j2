@@ -1,0 +1,21 @@
+from dataclasses import dataclass
+
+@dataclass
+class ApiEndpoint:
+    """接口端点描述类"""
+    path: str
+    method: str
+    desc: str
+    host: str
+
+
+class {{ class_name }}:
+    """接口路径集合"""
+    {% for api in apis %}
+    {{ api.constant_name }} = ApiEndpoint(
+        path="{{ api.path }}",
+        method="{{ api.method }}",
+        desc="{{ api.title }}",
+        host=""
+    )
+    {% endfor %}

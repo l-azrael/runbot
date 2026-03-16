@@ -1,0 +1,5 @@
+[
+  {"desc": "正常创建VIP标签", "name": "VIP001", "type": 1, "expected_code": 0},
+  {"desc": "名称含特殊字符", "name": "VIP@#$", "type": 1, "expected_code": 0},
+  {"desc": "类型为0创建失败", "name": "BAD001", "type": 0, "expected_code": 1}
+]

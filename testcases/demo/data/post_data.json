@@ -1,0 +1,5 @@
+[
+  {"desc": "JSON文件-正常数据", "name": "json_user", "age": 28},
+  {"desc": "JSON文件-特殊字符", "name": "用户@test", "age": 35},
+  {"desc": "JSON文件-最小年龄", "name": "young_user", "age": 1}
+]

@@ -1,0 +1,84 @@
+{
+    "test_read_parametrize_json_test": [
+        {
+            "params": {
+                "selectAll": "1",
+                "msg": "我是中文"
+            },
+            "desc": "test case"
+        },
+        {
+            "params": {
+                "selectAll": "2",
+                "msg": "我是中文2"
+            },
+            "desc": "描述信息2"
+        },
+        {
+            "params": {
+                "selectAll": "3",
+                "msg": "我是中文3"
+            },
+            "desc": "描述信息3"
+        },
+        {
+            "params": {
+                "selectAll": "4",
+                "msg": "我是中文4"
+            },
+            "desc": "描述信息4"
+        }
+    ],
+    "test_read_parametrize_json1": [
+        {
+            "params": {
+                "selectAll": "test1"
+            },
+            "desc": "描述信息1"
+        },
+        {
+            "params": {
+                "selectAll": "test2"
+            },
+            "desc": "描述信息2"
+        },
+        {
+            "params": {
+                "selectAll": "test3"
+            },
+            "desc": "描述信息3"
+        },
+        {
+            "params": {
+                "selectAll": "test4"
+            },
+            "desc": "描述信息4"
+        }
+    ],
+    "test_read_parametrize_json_test2": [
+        {
+            "params": {
+                "selectAll": "test1"
+            },
+            "desc": "描述信息1"
+        },
+        {
+            "params": {
+                "selectAll": "test2"
+            },
+            "desc": "描述信息2"
+        },
+        {
+            "params": {
+                "selectAll": "test3"
+            },
+            "desc": "描述信息3"
+        },
+        {
+            "params": {
+                "selectAll": "test4"
+            },
+            "desc": "描述信息4"
+        }
+    ]
+}

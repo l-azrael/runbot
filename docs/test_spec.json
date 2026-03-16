@@ -1,0 +1,73 @@
+{
+  "openapi": "3.0.0",
+  "info": {"title": "Test API", "version": "1.0.0"},
+  "paths": {
+    "/api/member/tag/save": {
+      "post": {
+        "tags": ["member"],
+        "summary": "保存成员标签",
+        "operationId": "saveMemberTag",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "type"],
+                "properties": {
+                  "name": {"type": "string", "description": "标签名称", "example": "VIP001"},
+                  "type": {"type": "integer", "description": "标签类型", "enum": [0, 1], "example": 1}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {"type": "integer"},
+                    "message": {"type": "string"},
+                    "data": {"type": "object"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/member/tag/delete": {
+      "post": {
+        "tags": ["member"],
+        "summary": "删除成员标签",
+        "operationId": "deleteMemberTag",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["ids"],
+                "properties": {
+                  "ids": {"type": "array", "description": "标签ID列表"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {"200": {"content": {"application/json": {"schema": {"type": "object", "properties": {"code": {"type": "integer"}}}}}}}
+      }
+    },
+    "/api/live/list": {
+      "get": {
+        "tags": ["live"],
+        "summary": "获取直播列表",
+        "operationId": "getLiveList",
+        "responses": {"200": {"content": {"application/json": {"schema": {"type": "object", "properties": {"code": {"type": "integer"}, "data": {"type": "array"}}}}}}}
+      }
+    }
+  }
+}
