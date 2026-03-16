@@ -40,5 +40,8 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
+# 临时图片
+*.png
+
 # Pipfile.lock（可选，团队统一则保留）
 # Pipfile.lock
