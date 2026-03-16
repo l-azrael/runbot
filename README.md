@@ -1,8 +1,8 @@
 # RunBot
 
-基于 pytest 的企业级接口自动化测试框架。
+基于 pytest 的接口自动化测试框架。
 
-声明式接口建模 · OpenAPI 代码生成 · AI 辅助生成用例 · 多环境动态切换 · SQLite 状态管理 · 可插拔中间件 · 多任务并发执行
+声明式接口建模 · API 代码生成 · AI 辅助生成用例 · 多环境动态切换 · SQLite 状态管理 · 流式中间件 · 多任务并发执行
 
 ---
 
@@ -18,7 +18,7 @@
 | JSON Schema 自动校验 | 首次请求自动采集响应 Schema 存入 SQLite，后续用例直接 `assert_schema` 校验 |
 | OpenAPI 代码生成 | 从 Swagger 文档一键生成 `apis.py` + `models.py`，支持按 tag/路径过滤 |
 | AI 辅助生成用例 | 接口 metadata 结构化后，AI 可直接读取生成测试用例和数据工厂 |
-| 可插拔中间件 | 日志、重试、自定义逻辑按需插拔，链式执行 |
+| 可插拔中间件 | 日志、重试、自定义逻辑按需插拔，链式执行（待优化） |
 | 一键环境初始化 | `source setup.sh` 自动检测 Python、创建虚拟环境、安装依赖、注册 `rbot` 命令 |
 
 ---
@@ -765,6 +765,7 @@ name: str = field(metadata={
 - 点击「查看详情」弹窗显示日志和错误堆栈
 
 同时保留 allure 报告支持（需安装 `brew install allure`），数据输出到 `reports/json/`。
+![alt text](image.png)
 
 ---
 
